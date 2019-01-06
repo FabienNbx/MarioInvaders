@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:controller="Controller.ControllerView"
+        xmlns:fx="http://javafx.com/fxml" prefHeight="100.0" prefWidth="600.0" id="root">
+    <children>
+        <Text text="Mario Invaders" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="0.0"/>
+        <Button id="button"  text="Start" fx:id="buttonStart" onAction="#ClickStart"
+                AnchorPane.topAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+        <Button id="button"  text="Quit" fx:id="buttonQuit"  onAction="#ClickQuit"
+                AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+    </children>
+
+</AnchorPane>
