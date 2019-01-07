@@ -12,7 +12,7 @@ public class MediumShell extends Shell {
 
     @Override
     public void move(){
-        updateImageView(getImageX(),getImageY()+2);
+        updateImageView(getImageX(),getImageY()+4);
     }
 
     public static int getTailleImgX(){

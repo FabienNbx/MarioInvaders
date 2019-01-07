@@ -12,7 +12,7 @@ public class SmallShell extends Shell {
 
     @Override
     public void move(){
-        updateImageView(getImageX(),getImageY()+3);
+        updateImageView(getImageX(),getImageY()+6);
     }
 
     public static int getTailleImgX(){ return tailleImgX;}

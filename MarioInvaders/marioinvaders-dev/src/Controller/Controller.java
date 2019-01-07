@@ -71,8 +71,8 @@ public class Controller {
     }
 
     private void Collisions(int imageX, int imageY) {
+        int centreMario[] = {imageX + 25, imageY + 25};
         if(!mario.isFlashing()) {
-            int centreMario[] = {imageX + 25, imageY + 25};
             for (Projectile p : listShell) {
                 String s = p.getClass().getName();
                 int x;
@@ -100,12 +100,58 @@ public class Controller {
                         y = 0;
                 }
                 int centreProjectile[] = {p.getImageX() + x, p.getImageY() + y};
-                int dist = (int) sqrt(pow(centreProjectile[0] - centreMario[0], 2) + pow(centreProjectile[1] - centreMario[1], 2));
-                int m = min(x, y);
-                if (dist <= 25 + m) {
+                int mini = min(x, y);
+                int distMario = (int) sqrt(pow(centreProjectile[0] - centreMario[0], 2) + pow(centreProjectile[1] - centreMario[1], 2));
+                if (distMario <= 25 + mini) {
                     mario.beHitted(power);
                 }
             }
+        }
+        ArrayList<Projectile> listMissiledead = new ArrayList<>();
+        ArrayList<Projectile> listShelldead = new ArrayList<>();
+        for(Projectile m : listMissile) {
+            int centreMissile[] = {m.getImageX()+15, m.getImageY()+15};
+            for (Projectile p : listShell) {
+                String s = p.getClass().getName();
+                int x;
+                int y;
+                switch (s) {
+                    case "Modele.Metier.SmallShell":
+                        x = SmallShell.getTailleImgX() / 2;
+                        y = SmallShell.getTailleImgY() / 2;
+                        break;
+                    case "Modele.Metier.MediumShell":
+                        x = MediumShell.getTailleImgX() / 2;
+                        y = MediumShell.getTailleImgY() / 2;
+                        break;
+                    case "Modele.Metier.BigShell":
+                        x = BigShell.getTailleImgX() / 2;
+                        y = BigShell.getTailleImgY() / 2;
+                        break;
+                    default:
+                        x = 0;
+                        y = 0;
+                }
+                int centreProjectile[] = {p.getImageX() + x, p.getImageY() + y};
+                int mini = min(x, y);
+                int distMissile = (int) sqrt(pow(centreMissile[0] - centreProjectile[0], 2) + pow(centreMissile[1] - centreProjectile[1], 2));
+                if (distMissile <= 15 + mini ){
+                    Shell sh = (Shell) p;
+                    sh.beHitted(1);
+                    if(sh.getNbLife()==0){
+                        root.getChildren().remove(sh.getiV());
+                        listShelldead.add(p);
+                    }
+                    root.getChildren().remove(m.getiV());
+                    listMissiledead.add(m);
+                }
+            }
+        }
+        for (Projectile p: listShelldead) {
+            listShell.remove(p);
+        }
+        for (Projectile p: listMissiledead) {
+            listMissile.remove(p);
         }
     }
 
@@ -159,7 +205,7 @@ public class Controller {
 
     private void MarioDead(int imageX, int imageY){
         if(imageY< Main.getTailleYS()) {
-            mario.updateImageView(imageX, imageY + 1);
+            mario.updateImageView(imageX, imageY + 5);
         }
         else{
             root.getChildren().remove(mario.isIV());

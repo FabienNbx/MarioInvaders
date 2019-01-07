@@ -11,6 +11,6 @@ public class Missile extends Projectile{
 
     @Override
     public void move() {
-        updateImageView(getImageX(),getImageY()-3);
+        updateImageView(getImageX(),getImageY()-6);
     }
 }

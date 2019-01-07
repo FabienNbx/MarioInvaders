@@ -12,7 +12,7 @@ public class BigShell extends Shell {
 
     @Override
     public void move(){
-        updateImageView(getImageX(),getImageY()+1);
+        updateImageView(getImageX(),getImageY()+2);
     }
 
     public static int getTailleImgX(){
