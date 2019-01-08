@@ -23,7 +23,7 @@ public abstract class Projectile {
     public abstract void move();
 
     public void isHitting(){
-        if(imageX<0 || imageX>1290 || imageY<0 || imageY>900){
+        if(imageY>Main.getTailleYS()){
             isH=true;
         }
     }

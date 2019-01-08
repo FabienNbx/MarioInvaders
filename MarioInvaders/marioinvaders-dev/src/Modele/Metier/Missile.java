@@ -2,6 +2,7 @@ package Modele.Metier;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import sample.Main;
 
 public class Missile extends Projectile{
 
@@ -11,6 +12,6 @@ public class Missile extends Projectile{
 
     @Override
     public void move() {
-        updateImageView(getImageX(),getImageY()-6);
+        updateImageView(getImageX(),getImageY()-(3* Main.getVitesse()));
     }
 }

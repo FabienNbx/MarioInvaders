@@ -27,7 +27,7 @@ public class Mario {
         iV = new ImageView(mario);
         imageX=620;
         imageY=850;
-        nbLife=3;
+        nbLife=5;
         iV.setX(imageX);
         iV.setY(imageY);
     }

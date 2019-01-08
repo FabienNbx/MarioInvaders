@@ -1,73 +1,245 @@
 package Controller;
 
 import Modele.Metier.*;
-import javafx.animation.AnimationTimer;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Circle;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import sample.Main;
-
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import static java.lang.Math.*;
+import static sample.Main.getTailleXS;
 
 public class Controller {
-    private AnimationTimer aT;
+    private Timeline master;
+    private int cpt = 0;
     private AnchorPane root;
     private Scene scene;
     private Mario mario;
     private ArrayList<Projectile> listMissile;
     private ArrayList<Projectile> listShell;
+    private ArrayList<Projectile> listMissBoss;
+    private ArrayList<Projectile> listMissiledead;
+    private ArrayList<Projectile> listShelldead;
+    private ArrayList<Projectile> listMissBossdead;
     private int[] tabRand = {0,0,0,0,0,0,0,1,1,1,1,2};
-    Random randomS = new Random();
+    private Random randomS = new Random();
+    private int boss = 0;   // 0 = pas de boss / 1 = boss move / 2 = boss shoot / 3 = boss mort
+    private int nbBoss = 0;
+    private int cptB = 0;
+    Boss b;
+    private Timeline timelineBoss;
 
     public Controller(Stage primaryStage) {
         root = new AnchorPane();
-        scene = new Scene(root, Main.getTailleXS(), Main.getTailleYS());
+        scene = new Scene(root, getTailleXS(), Main.getTailleYS());
         primaryStage.setScene(scene);
         primaryStage.show();
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
         primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
-
+        ImageView fond = new ImageView(new Image("file:src/images/fond.jpeg",(double)Main.getTailleXS(),(double)Main.getTailleYS(),true,true));
+        root.getChildren().add(fond);
         mario = new Mario();
         root.getChildren().add(mario.isIV());
         listMissile = new ArrayList<>();
         listShell = new ArrayList<>();
+        listMissBoss = new ArrayList<>();
+        listMissiledead = new ArrayList<>();
+        listShelldead = new ArrayList<>();
+        listMissBossdead = new ArrayList<>();
         start();
+
+        timelineBoss = new Timeline(new KeyFrame(
+                Duration.millis(1000),
+                ae -> lancerBoss()));
+        timelineBoss.setCycleCount(Animation.INDEFINITE);
+        timelineBoss.play();
+
     }
 
     private void start(){
         scene.setOnKeyPressed(key -> mario.actions(key));
         scene.setOnKeyReleased(key -> mario.stop(key));
+        master = new Timeline(new KeyFrame(
+                Duration.millis(10),
+                ae -> boucle()));
+        master.setCycleCount(Animation.INDEFINITE);
+        master.play();
+    }
 
-        aT = new AnimationTimer(){
-            int cpt=0;
-            @Override
-            public void handle(long now) {
-                cpt++;
-                int imageX = mario.isImageX(), imageY = mario.isImageY();
-                Collisions(imageX,imageY);
-                if (mario.isDead()){
-                    MarioDead(imageX,imageY);
+    private void boucle() {
+
+        int imageX = mario.isImageX(), imageY = mario.isImageY();
+        Collisions(imageX, imageY);
+        if (mario.isDead()) {
+            MarioDead(imageX, imageY);
+        }
+        else {
+            MarioMove(imageX, imageY);
+            MarioShoot(imageX, imageY);
+            if(boss!=0) {
+                ColliMissBoss(imageX,imageY);
+                if (boss == 1) {
+                    BossMoveDown();
                 }
-                else {
-                    MarioMove(imageX,imageY);
-                    MarioShoot(imageX,imageY);
-                    if(cpt==50) {
-                        Shells();
-                        cpt=0;
-                    }
-                    ShellsFall();
+                else if(boss == 2){
+                    BossMoveH();
+                    BossShoot();
+                    ColliBoss(imageX,imageY);
+                    cptB++;
+                }
+                else{
+                    PurgeMissBoss();
+                    BossMoveUp();
+                    cpt++;
                 }
             }
-        };
-        aT.start();
+            else{
+                cpt++;
+            }
+            if (cpt == 50 / Main.getVitesse()) {
+                Shells();
+                cpt = 0;
+            }
+            ShellsFall();
+        }
+    }
+
+    private void ColliMissBoss(int imageX, int imageY) {
+        int centreMario[] = {imageX + 25, imageY + 25};
+        if(!mario.isFlashing()) {
+            for(Projectile m : listMissBoss) {
+                int tailleMiss[] = b.tailleMissile();
+                int centreMiss[] = {m.getImageX() + tailleMiss[0] / 2, m.getImageY() + tailleMiss[1] / 2};
+                int mini = min(tailleMiss[0] / 2, tailleMiss[1] / 2);
+                int distMario = (int) sqrt(pow(centreMiss[0] - centreMario[0], 2) + pow(centreMiss[1] - centreMario[1], 2));
+                if (distMario <= 25 + mini) {
+                    mario.beHitted(tailleMiss[2]);
+                    root.getChildren().remove(m.getiV());
+                    listMissBossdead.add(m);
+                }
+            }
+        }
+        for (Projectile p: listMissBossdead) {
+            listMissBoss.remove(p);
+        }
+    }
+
+    private void ColliBoss(int imageX, int imageY) {
+        int centreMario[] = {imageX + 25, imageY + 25};
+        if(!mario.isFlashing()) {
+            int tailleBoss[] = b.tailleBoss();
+            int centreBoss[] = {b.getImageX() + tailleBoss[0]/2, b.getImageY() +  tailleBoss[1]/2};
+            int mini = min( tailleBoss[0]/2,  tailleBoss[1]/2);
+            int distMario = (int) sqrt(pow(centreBoss[0] - centreMario[0], 2) + pow(centreBoss[1] - centreMario[1], 2));
+            if (distMario <= 25 + mini) {
+                mario.beHitted( tailleBoss[2]);
+            }
+        }
+        ArrayList<Projectile> listMissiledead = new ArrayList<>();
+        for(Projectile m : listMissile) {
+            int centreMissile[] = {m.getImageX()+15, m.getImageY()+15};
+
+            int tailleBoss[] = b.tailleBoss();
+            int centreBoss[] = {b.getImageX() + tailleBoss[0]/2, b.getImageY() + tailleBoss[1]/2};
+            int mini = min(tailleBoss[0]/2, tailleBoss[1]/2);
+            int distMissile = (int) sqrt(pow(centreMissile[0] - centreBoss[0], 2) + pow(centreMissile[1] - centreBoss[1], 2));
+            if (distMissile <= 15 + mini ){
+                b.beHitted(1);
+                if(b.getNbLife()==0){
+                    boss=3;
+                }
+                root.getChildren().remove(m.getiV());
+                listMissiledead.add(m);
+                if(boss==3)
+                    break;
+            }
+
+        }
+        for (Projectile p: listMissiledead) {
+            listMissile.remove(p);
+        }
+    }
+
+    private void BossShoot() {
+        if(cptB==100){
+            cptB=0;
+            Projectile p;
+            if(nbBoss==1){
+                p = new Dirt(b.getImageX(),b.getImageY());
+            }
+            else if (nbBoss==2){
+                p = new SmallFireBall(b.getImageX(),b.getImageY());
+            }
+            else{
+                p = new BigFireBall(b.getImageX(),b.getImageY());
+            }
+            listMissBoss.add(p);
+            root.getChildren().add(p.getiV());
+        }
+        if(listMissBoss.size() != 0){
+            int i = 0;
+            while (i < listMissBoss.size()) {
+                Projectile m = listMissBoss.get(i);
+                if (m.isH()) {
+                    root.getChildren().remove(m.getiV());
+                    listMissBoss.remove(i);
+                    continue;
+                }
+                m.move();
+                m.isHitting();
+                i++;
+            }
+        }
+    }
+
+    private void PurgeMissBoss(){
+        int i=0;
+        while(listMissBoss.size() > 0){
+            Projectile m = listMissBoss.get(i);
+            root.getChildren().remove(m.getiV());
+            listMissBoss.remove(i);
+        }
+    }
+
+    private void BossMoveDown() {
+        b.moveDown();
+        if (b.getImageY() >= Main.getTailleYS() / 4) {
+            boss = 2;
+        }
+    }
+
+    private void BossMoveH(){
+        b.moveH();
+    }
+
+    private void BossMoveUp(){
+        b.moveUp();
+        int taille[] = b.tailleBoss();
+        if(b.getImageY()+taille[1]<=0){
+            root.getChildren().remove(b.getiV());
+            if(nbBoss==3) {
+                master.stop();
+                Purge();
+                Main.win();
+            }
+            else {
+                cptB=0;
+                boss = 0;
+                timelineBoss.play();
+            }
+        }
     }
 
     private void Collisions(int imageX, int imageY) {
@@ -104,11 +276,15 @@ public class Controller {
                 int distMario = (int) sqrt(pow(centreProjectile[0] - centreMario[0], 2) + pow(centreProjectile[1] - centreMario[1], 2));
                 if (distMario <= 25 + mini) {
                     mario.beHitted(power);
+                    root.getChildren().remove(p.getiV());
+                    listShelldead.add(p);
                 }
             }
         }
-        ArrayList<Projectile> listMissiledead = new ArrayList<>();
-        ArrayList<Projectile> listShelldead = new ArrayList<>();
+        for (Projectile p: listShelldead) {
+            listShell.remove(p);
+        }
+
         for(Projectile m : listMissile) {
             int centreMissile[] = {m.getImageX()+15, m.getImageY()+15};
             for (Projectile p : listShell) {
@@ -161,20 +337,20 @@ public class Controller {
         Projectile s;
         switch(num){
             case 0:
-                randX = randomS.nextInt(Main.getTailleXS()-SmallShell.getTailleImgX());
-                s = new SmallShell(randX , 0 );
+                randX = randomS.nextInt(getTailleXS()-SmallShell.getTailleImgX());
+                s = new SmallShell(randX , -SmallShell.getTailleImgY() );
                 listShell.add(s);
                 root.getChildren().add(s.getiV());
                 break;
             case 1:
-                randX = randomS.nextInt(Main.getTailleXS()-MediumShell.getTailleImgX());
-                s = new MediumShell(randX , 0 );
+                randX = randomS.nextInt(getTailleXS()-MediumShell.getTailleImgX());
+                s = new MediumShell(randX , -MediumShell.getTailleImgY() );
                 listShell.add(s);
                 root.getChildren().add(s.getiV());
                 break;
             case 2:
-                randX = randomS.nextInt(Main.getTailleXS()-BigShell.getTailleImgX());
-                s = new BigShell(randX , 0 );
+                randX = randomS.nextInt(getTailleXS()-BigShell.getTailleImgX());
+                s = new BigShell(randX , -BigShell.getTailleImgY() );
                 listShell.add(s);
                 root.getChildren().add(s.getiV());
                 break;
@@ -205,12 +381,13 @@ public class Controller {
 
     private void MarioDead(int imageX, int imageY){
         if(imageY< Main.getTailleYS()) {
-            mario.updateImageView(imageX, imageY + 5);
+            mario.updateImageView(imageX, imageY + (1*Main.getVitesse()));
         }
         else{
             root.getChildren().remove(mario.isIV());
-            aT.stop();
-            Main.creerMain();
+            master.stop();
+            Purge();
+            Main.gameover();
         }
     }
 
@@ -238,18 +415,51 @@ public class Controller {
     }
 
     private void MarioMove(int imageX, int imageY){
-        if (mario.isGoRight() && imageX < Main.getTailleXS() - 50) {
-            imageX += 10;
+        int vitesse;
+        if(Main.getVitesse()==2)
+            vitesse=3;
+        else
+            vitesse=1;
+        if (mario.isGoRight() && imageX < getTailleXS() - 50) {
+            imageX += 2*vitesse;
         }
         if (mario.isGoLeft() && imageX > 0) {
-            imageX -= 10;
+            imageX -= 2*vitesse;
         }
         if (mario.isGoDown() && imageY < Main.getTailleYS() - 50) {
-            imageY += 10;
+            imageY += 2*vitesse;
         }
         if (mario.isGoUp() && imageY > 0) {
-            imageY -= 10;
+            imageY -= 2*vitesse;
         }
         mario.updateImageView(imageX, imageY);
     }
+
+
+    private void lancerBoss() {
+        boss=1;
+        nbBoss++;
+        switch (nbBoss){
+            case 1:
+                b = new Goomboss(Main.getTailleXS()/2-Goomboss.getTailleImgX()/2,-Goomboss.getTailleImgY());
+                break;
+            case 2:
+                b = new BowserJr(Main.getTailleXS()/2-BowserJr.getTailleImgX()/2,-BowserJr.getTailleImgY());
+                break;
+            case 3:
+                b = new Bowser(Main.getTailleXS()/2-Bowser.getTailleImgX()/2,-BowserJr.getTailleImgY());
+                break;
+            default:
+                break;
+        }
+        root.getChildren().add(b.getiV());
+        timelineBoss.stop();
+    }
+
+    private void Purge(){
+        root.getChildren().removeAll();
+    }
+
+
+
 }
