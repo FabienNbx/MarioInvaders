@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Mario Invaders.iml" filepath="$PROJECT_DIR$/Mario Invaders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/marioinvaders-dev.iml" filepath="$PROJECT_DIR$/.idea/marioinvaders-dev.iml" />
     </modules>
   </component>
 </project>

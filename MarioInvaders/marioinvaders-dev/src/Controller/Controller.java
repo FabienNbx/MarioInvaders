@@ -4,11 +4,14 @@ import Modele.Metier.*;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -65,7 +68,12 @@ public class Controller {
                 ae -> lancerBoss()));
         timelineBoss.setCycleCount(Animation.INDEFINITE);
         timelineBoss.play();
-
+        Label l = new Label();
+        l.textProperty().bind(mario.nbLife.asString());
+        l.setFont(new Font("System",20.0));
+        l.setStyle("-fx-font-weight: bold");
+        AnchorPane.setRightAnchor(l,10.0);
+        root.getChildren().add(l);
     }
 
     private void start(){
@@ -108,7 +116,7 @@ public class Controller {
             else{
                 cpt++;
             }
-            if (cpt == 50 / Main.getVitesse()) {
+            if (cpt == 50/(nbBoss+1) / Main.getVitesse()) {
                 Shells();
                 cpt = 0;
             }
@@ -149,13 +157,13 @@ public class Controller {
         }
         ArrayList<Projectile> listMissiledead = new ArrayList<>();
         for(Projectile m : listMissile) {
-            int centreMissile[] = {m.getImageX()+15, m.getImageY()+15};
+            int centreMissile[] = {m.getImageX()+9, m.getImageY()+9};
 
             int tailleBoss[] = b.tailleBoss();
             int centreBoss[] = {b.getImageX() + tailleBoss[0]/2, b.getImageY() + tailleBoss[1]/2};
             int mini = min(tailleBoss[0]/2, tailleBoss[1]/2);
             int distMissile = (int) sqrt(pow(centreMissile[0] - centreBoss[0], 2) + pow(centreMissile[1] - centreBoss[1], 2));
-            if (distMissile <= 15 + mini ){
+            if (distMissile <= 9 + mini ){
                 b.beHitted(1);
                 if(b.getNbLife()==0){
                     boss=3;
@@ -173,17 +181,20 @@ public class Controller {
     }
 
     private void BossShoot() {
-        if(cptB==100){
+        double tps;
+        tps = 50 + (Math.random() * (300 - 50));
+        if(cptB>= (int) tps){
             cptB=0;
             Projectile p;
+            int tab[] = b.tailleBoss();
             if(nbBoss==1){
-                p = new Dirt(b.getImageX(),b.getImageY());
+                p = new Dirt(b.getImageX()+tab[0]/2,b.getImageY()+tab[1]);
             }
             else if (nbBoss==2){
-                p = new SmallFireBall(b.getImageX(),b.getImageY());
+                p = new SmallFireBall(b.getImageX()+tab[0]/2,b.getImageY()+tab[1]);
             }
             else{
-                p = new BigFireBall(b.getImageX(),b.getImageY());
+                p = new BigFireBall(b.getImageX()+tab[0]/2,b.getImageY()+tab[1]);
             }
             listMissBoss.add(p);
             root.getChildren().add(p.getiV());
@@ -215,7 +226,7 @@ public class Controller {
 
     private void BossMoveDown() {
         b.moveDown();
-        if (b.getImageY() >= Main.getTailleYS() / 4) {
+        if (b.getImageY() >= Main.getTailleYS() / 2 - b.tailleBoss()[1]) {
             boss = 2;
         }
     }
@@ -286,7 +297,7 @@ public class Controller {
         }
 
         for(Projectile m : listMissile) {
-            int centreMissile[] = {m.getImageX()+15, m.getImageY()+15};
+            int centreMissile[] = {m.getImageX()+9, m.getImageY()+9};
             for (Projectile p : listShell) {
                 String s = p.getClass().getName();
                 int x;
@@ -311,7 +322,7 @@ public class Controller {
                 int centreProjectile[] = {p.getImageX() + x, p.getImageY() + y};
                 int mini = min(x, y);
                 int distMissile = (int) sqrt(pow(centreMissile[0] - centreProjectile[0], 2) + pow(centreMissile[1] - centreProjectile[1], 2));
-                if (distMissile <= 15 + mini ){
+                if (distMissile <= 9 + mini ){
                     Shell sh = (Shell) p;
                     sh.beHitted(1);
                     if(sh.getNbLife()==0){
@@ -447,7 +458,7 @@ public class Controller {
                 b = new BowserJr(Main.getTailleXS()/2-BowserJr.getTailleImgX()/2,-BowserJr.getTailleImgY());
                 break;
             case 3:
-                b = new Bowser(Main.getTailleXS()/2-Bowser.getTailleImgX()/2,-BowserJr.getTailleImgY());
+                b = new Bowser(Main.getTailleXS()/2-Bowser.getTailleImgX()/2,-Bowser.getTailleImgY());
                 break;
             default:
                 break;

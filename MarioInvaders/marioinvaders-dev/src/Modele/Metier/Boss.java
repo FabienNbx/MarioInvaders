@@ -8,7 +8,7 @@ public abstract class Boss {
     private ImageView iV;
     private int imageX;
     private int imageY;
-    private int moveH = 0; // 0 = gauche / 1 = droite
+    protected int moveH = 0; // 0 = gauche / 1 = droite
 
     public Boss (ImageView iV, int imageX, int imageY, int nbLife){
         this.iV=iV;
@@ -31,19 +31,7 @@ public abstract class Boss {
         updateImageView(getImageX(),getImageY()+1* Main.getVitesse());
     }
 
-    public void moveH(){
-        if(moveH==0) {
-            updateImageView(getImageX()-1*Main.getVitesse(), getImageY());
-            if(imageX<=0)
-                moveH=1;
-        }
-        else{
-            updateImageView(getImageX()+1*Main.getVitesse(), getImageY());
-            int taille[] = tailleBoss();
-            if(imageX+taille[0]>=Main.getTailleXS())
-                moveH=0;
-        }
-    }
+    public abstract void moveH();
 
     public int[] tailleBoss(){
         String s = getClass().getName();

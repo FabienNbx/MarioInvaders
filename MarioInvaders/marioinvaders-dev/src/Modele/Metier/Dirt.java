@@ -5,8 +5,8 @@ import javafx.scene.image.ImageView;
 import sample.Main;
 
 public class Dirt extends Projectile {
-    private static int tailleImgX = 100;
-    private static int tailleImgY = 76;
+    private static int tailleImgX = 74;
+    private static int tailleImgY = 74;
 
     public Dirt(int imageX, int imageY){
         super(new ImageView(new Image("file:src/images/dirt.png",true)),imageX,imageY);

@@ -7,12 +7,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="root" prefHeight="245.0" prefWidth="162.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerWin">
+<AnchorPane id="root" prefHeight="245.0" prefWidth="162.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerWin">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="245.0" stroke="BLACK" strokeType="INSIDE" width="165.0" />
       <Text fill="RED" layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Winner" textAlignment="CENTER" wrappingWidth="134.50000023841858">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Text>
         <ImageView fitHeight="145.0" fitWidth="105.0" layoutX="45.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">

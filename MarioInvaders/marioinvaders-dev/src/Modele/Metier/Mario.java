@@ -2,6 +2,11 @@ package Modele.Metier;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.InvalidationListener;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -13,7 +18,7 @@ public class Mario {
     private ImageView iV ;
     private int imageX;
     private int imageY;
-    private int nbLife;
+    public SimpleIntegerProperty nbLife;
     private boolean goUp;
     private boolean goDown;
     private boolean goRight;
@@ -27,7 +32,7 @@ public class Mario {
         iV = new ImageView(mario);
         imageX=620;
         imageY=850;
-        nbLife=5;
+        nbLife = new SimpleIntegerProperty(5);
         iV.setX(imageX);
         iV.setY(imageY);
     }
@@ -110,8 +115,8 @@ public class Mario {
         if(power<0 && isFlashing && isDead){
             return;
         }
-        nbLife-=power;
-        if(nbLife<=0){
+        nbLife.set(nbLife.get()-power);
+        if(nbLife.get()<=0){
             die();
         }
         else{
@@ -145,9 +150,6 @@ public class Mario {
     }
     public ImageView isIV() {
         return iV;
-    }
-    public int isNbLife() {
-        return nbLife;
     }
     public boolean isMissiles() {
         return missiles;
