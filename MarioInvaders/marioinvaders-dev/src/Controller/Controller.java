@@ -64,10 +64,16 @@ public class Controller {
         start();
 
         timelineBoss = new Timeline(new KeyFrame(
-                Duration.millis(1000),
+                Duration.millis(10000),
                 ae -> lancerBoss()));
         timelineBoss.setCycleCount(Animation.INDEFINITE);
         timelineBoss.play();
+        Label vie = new Label();
+        vie.setText("Vies :");
+        vie.setFont(new Font("System",20.0));
+        vie.setStyle("-fx-font-weight: bold");
+        AnchorPane.setRightAnchor(vie,30.0);
+        root.getChildren().add(vie);
         Label l = new Label();
         l.textProperty().bind(mario.nbLife.asString());
         l.setFont(new Font("System",20.0));
