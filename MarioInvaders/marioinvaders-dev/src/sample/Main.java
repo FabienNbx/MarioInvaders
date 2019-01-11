@@ -66,6 +66,7 @@ public class Main extends Application {
             final FXMLLoader fxmlLoader = new FXMLLoader(url);
             final AnchorPane root = fxmlLoader.load();
             final Scene scene = new Scene(root);
+            scene.getStylesheets().add("View/css/style.css");
             stageMain.setScene(scene);
         }
         catch (IOException e){

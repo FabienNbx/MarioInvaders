@@ -48,6 +48,7 @@ public class Controller {
         scene = new Scene(root, getTailleXS(), Main.getTailleYS());
         primaryStage.setScene(scene);
         primaryStage.show();
+
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
         primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);

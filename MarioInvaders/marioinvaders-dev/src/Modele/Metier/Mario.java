@@ -28,7 +28,7 @@ public class Mario {
     private boolean isFlashing = false;
 
     public Mario(){
-        mario = new Image("file:src/images/mario.png", true);
+        mario = new Image("file:src/images/marioVert.png", true);
         iV = new ImageView(mario);
         imageX=620;
         imageY=850;

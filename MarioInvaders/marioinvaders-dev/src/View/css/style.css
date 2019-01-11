@@ -1,0 +1,14 @@
+#buttonStart {
+    -fx-background-color: green;
+}
+
+#buttonQuit {
+    -fx-background-color: red;
+}
+
+.button{
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius:3;
+    -fx-font-weight: bold;
+}
