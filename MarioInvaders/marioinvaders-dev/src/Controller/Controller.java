@@ -164,13 +164,13 @@ public class Controller {
         }
         ArrayList<Projectile> listMissiledead = new ArrayList<>();
         for(Projectile m : listMissile) {
-            int centreMissile[] = {m.getImageX()+9, m.getImageY()+9};
+            int centreMissile[] = {m.getImageX()+Missile.getTailleImgX()/2, m.getImageY()+Missile.getTailleImgY()/2};
 
             int tailleBoss[] = b.tailleBoss();
             int centreBoss[] = {b.getImageX() + tailleBoss[0]/2, b.getImageY() + tailleBoss[1]/2};
             int mini = min(tailleBoss[0]/2, tailleBoss[1]/2);
             int distMissile = (int) sqrt(pow(centreMissile[0] - centreBoss[0], 2) + pow(centreMissile[1] - centreBoss[1], 2));
-            if (distMissile <= 9 + mini ){
+            if (distMissile <= Missile.getTailleImgX()/2 + mini ){
                 b.beHitted(1);
                 if(b.getNbLife()==0){
                     boss=3;
@@ -304,7 +304,7 @@ public class Controller {
         }
 
         for(Projectile m : listMissile) {
-            int centreMissile[] = {m.getImageX()+9, m.getImageY()+9};
+            int centreMissile[] = {m.getImageX()+Missile.getTailleImgX()/2, m.getImageY()+Missile.getTailleImgY()/2};
             for (Projectile p : listShell) {
                 String s = p.getClass().getName();
                 int x;
@@ -329,7 +329,7 @@ public class Controller {
                 int centreProjectile[] = {p.getImageX() + x, p.getImageY() + y};
                 int mini = min(x, y);
                 int distMissile = (int) sqrt(pow(centreMissile[0] - centreProjectile[0], 2) + pow(centreMissile[1] - centreProjectile[1], 2));
-                if (distMissile <= 9 + mini ){
+                if (distMissile <= Missile.getTailleImgX()/2 + mini ){
                     Shell sh = (Shell) p;
                     sh.beHitted(1);
                     if(sh.getNbLife()==0){

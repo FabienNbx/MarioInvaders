@@ -43,14 +43,14 @@ public class ControllerView {
     }
 
     public void ClickStart(ActionEvent actionEvent) {
-//        if(LentRB.isSelected()){
-//            Main.setVitesse(1);
-//        }
-//        else if(RapideRB.isSelected()){
-//            Main.setVitesse(2);
-//        }
-//        Main.creerJeu();
-        selectedItem.set("Luigi");
+        if(LentRB.isSelected()){
+            Main.setVitesse(1);
+        }
+        else if(RapideRB.isSelected()){
+            Main.setVitesse(2);
+        }
+        Main.creerJeu();
+        //selectedItem.set("Luigi");
     }
 
     public String getChoix() {

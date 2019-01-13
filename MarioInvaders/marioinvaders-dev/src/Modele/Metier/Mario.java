@@ -117,6 +117,7 @@ public class Mario {
         }
         nbLife.set(nbLife.get()-power);
         if(nbLife.get()<=0){
+            nbLife.set(0);
             die();
         }
         else{
