@@ -180,6 +180,8 @@ public class Controller {
             if (distMissile <= Missile.getTailleImgX()/2 + mini ){
                 b.beHitted(1);
                 if(b.getNbLife()==0){
+                    if(nbBoss!=3)
+                        Main.playNiveauSound();
                     boss=3;
                 }
                 root.getChildren().remove(m.getiV());

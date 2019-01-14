@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
+import sample.Main;
 
 public class Mario {
     private Image mario ;
@@ -116,6 +117,7 @@ public class Mario {
             return;
         }
         nbLife.set(nbLife.get()-power);
+        Main.playLifeSound();
         if(nbLife.get()<=0){
             nbLife.set(0);
             die();

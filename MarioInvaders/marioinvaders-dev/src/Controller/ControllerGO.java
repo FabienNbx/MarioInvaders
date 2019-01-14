@@ -1,4 +1,3 @@
 package Controller;
 
-public class ControllerGO {
-}
+public class ControllerGO {}

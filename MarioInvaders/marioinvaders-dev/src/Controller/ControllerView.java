@@ -42,6 +42,8 @@ public class ControllerView {
                 data.add(new Player(parts[0],Integer.parseInt(parts[1])));
             }
             buff.close();
+            lecture.close();
+            flux.close();
         }
         catch (Exception e){
             System.out.println(e.toString());
@@ -92,7 +94,7 @@ public class ControllerView {
             Main.creerJeu();
         }
         else{
-            pseudo.setStyle("-fx-border-color: red; -fx-border-width: 3px");
+            pseudo.setStyle("-fx-border-color: red; -fx-border-width: 3px; -fx-border-radius: 4px;");
         }
     }
 
