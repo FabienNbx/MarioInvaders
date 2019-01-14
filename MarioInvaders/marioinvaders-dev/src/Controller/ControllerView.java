@@ -8,19 +8,27 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import sample.Main;
+import sun.java2d.pipe.SpanShapeRenderer;
 
 import javax.swing.text.html.ImageView;
+import java.awt.*;
 
 public class ControllerView {
     @FXML private RadioButton LentRB;
     @FXML private RadioButton RapideRB;
+    @FXML private Button MarioButton;
+    @FXML private Button LuigiButton;
     @FXML private ImageView marioChoix;
 //    @FXML private ObservableList<String> options = FXCollections.observableArrayList("Mario","Luigi");
-    @FXML private final ComboBox combo = new ComboBox();
-    private SimpleStringProperty selectedItem = new SimpleStringProperty();
+    @FXML private ComboBox<String> combo;
     private SimpleStringProperty choix = new SimpleStringProperty();
 
 
@@ -32,19 +40,24 @@ public class ControllerView {
         else{
             LentRB.setSelected(true);
         }
-        //selectedItem.bindBidirectional(choix);
-        //combo.getSelectionModel().selectedItemProperty().getName();
-    }
-    @FXML
-    public void ClickQuit(ActionEvent actionEvent) {
-        Main.quit();
+        choix.bindBidirectional(combo.valueProperty());
+        choix.addListener((observable, oldValue, newValue) -> {
+            if(newValue.equals("Mario")){
+                Main.setPerso(0);
+                MarioButton.setStyle("-fx-background-color: rgba(255, 0, 0, 0.8) ");
+                LuigiButton.setStyle("-fx-background-color: rgba(195, 195, 195, 1) ");
+            }
+            else{
+                Main.setPerso(1);
+                LuigiButton.setStyle("-fx-background-color: rgba(0, 200, 0, 0.8) ");
+                MarioButton.setStyle("-fx-background-color: rgba(195, 195, 195, 1)");
+            }
+        });
     }
 
     @FXML
-    public void onChange(){
-        //System.out.println(selectedItem);
-        //choix.setValue(combo.getSelectionModel().getSelectedItem().toString());
-        //System.out.println(choix);
+    public void ClickQuit(ActionEvent actionEvent) {
+        Main.quit();
     }
 
     public void ClickStart(ActionEvent actionEvent) {
@@ -55,7 +68,13 @@ public class ControllerView {
             Main.setVitesse(2);
         }
         Main.creerJeu();
-        //selectedItem.set("Luigi");
+    }
 
+    public void onClickMario(){
+        choix.setValue("Mario");
+    }
+
+    public void onClickLuigi(){
+        choix.setValue("Luigi");
     }
 }

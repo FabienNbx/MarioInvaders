@@ -25,7 +25,7 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton fx:id="RapideRB" layoutX="201.0" layoutY="185.0" mnemonicParsing="false" text="Rapide" toggleGroup="$Vitesse" />
-      <ComboBox fx:id="combo" layoutX="138.0" layoutY="231.0" onHiding="#onChange" prefHeight="26.0" prefWidth="179.0" promptText="Choix personnage">
+      <ComboBox fx:id="combo" layoutX="138.0" layoutY="231.0" prefHeight="26.0" prefWidth="179.0" promptText="Choix personnage">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Mario" />
@@ -33,8 +33,8 @@
             </FXCollections>
         </items>
       </ComboBox>
-      <Button layoutX="65.0" layoutY="283.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="129.0" text="Mario" />
-      <Button layoutX="246.0" layoutY="283.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="129.0" text="Luigi" />
+      <Button fx:id="MarioButton" layoutX="65.0" layoutY="283.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="129.0" text="Mario" onAction="#onClickMario"/>
+      <Button fx:id="LuigiButton" layoutX="246.0" layoutY="283.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="129.0" text="Luigi" onAction="#onClickLuigi"/>
     </children>
 
 </AnchorPane>
