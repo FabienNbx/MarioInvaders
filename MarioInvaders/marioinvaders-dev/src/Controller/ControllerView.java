@@ -2,6 +2,8 @@ package Controller;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -31,6 +33,7 @@ public class ControllerView {
             LentRB.setSelected(true);
         }
         //selectedItem.bindBidirectional(choix);
+        //combo.getSelectionModel().selectedItemProperty().getName();
     }
     @FXML
     public void ClickQuit(ActionEvent actionEvent) {
@@ -38,8 +41,10 @@ public class ControllerView {
     }
 
     @FXML
-    public void choixChange(){
-        // combo.getValue ==== NULL
+    public void onChange(){
+        //System.out.println(selectedItem);
+        //choix.setValue(combo.getSelectionModel().getSelectedItem().toString());
+        //System.out.println(choix);
     }
 
     public void ClickStart(ActionEvent actionEvent) {
@@ -51,14 +56,6 @@ public class ControllerView {
         }
         Main.creerJeu();
         //selectedItem.set("Luigi");
-    }
 
-    public String getChoix() {
-        return combo.getValue().toString();
-    }
-
-    public void setChoix(String choix) {
-        this.choix.set(choix);
-        combo.setValue(choix);
     }
 }

@@ -15,9 +15,14 @@ import java.io.IOException;
 import java.net.URL;
 
 public class Main extends Application {
-    private static int tailleXS = 1440;
+    
+    // window's size
+    private static int tailleXS = 1440;     
     private static int tailleYS = 900;
+    
+    // speed different on a computer or on another
     private static int vitesse = 1;
+    
     private static Stage stageMain;
     public static int getTailleXS() {
         return tailleXS;
@@ -60,6 +65,10 @@ public class Main extends Application {
     }
 
 
+    /**
+     *
+     * @param name
+     */
     public static void affiche(String name){
         try {
             final URL url = Main.class.getResource(name);

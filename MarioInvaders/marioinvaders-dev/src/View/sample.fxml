@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="root" prefHeight="487.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerView">
+<AnchorPane id="root" prefHeight="487.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerView">
     <children>
         <Text layoutX="164.0" layoutY="43.0" text="Mario Invaders" wrappingWidth="143.32568359375" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="26.2919921875">
          <font>
@@ -25,7 +25,7 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton fx:id="RapideRB" layoutX="201.0" layoutY="185.0" mnemonicParsing="false" text="Rapide" toggleGroup="$Vitesse" />
-      <ComboBox fx:id="combo" layoutX="138.0" layoutY="231.0" onAction="#choixChange" prefHeight="26.0" prefWidth="179.0" promptText="Choix personnage">
+      <ComboBox fx:id="combo" layoutX="138.0" layoutY="231.0" onHiding="#onChange" prefHeight="26.0" prefWidth="179.0" promptText="Choix personnage">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="Mario" />
