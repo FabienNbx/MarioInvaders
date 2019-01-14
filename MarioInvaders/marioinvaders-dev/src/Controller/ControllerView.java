@@ -1,56 +1,56 @@
 package Controller;
 
+import Modele.Metier.Player;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Main;
-import sun.java2d.pipe.SpanShapeRenderer;
 
 import javax.swing.text.html.ImageView;
-import java.awt.*;
 
 public class ControllerView {
     @FXML private RadioButton LentRB;
     @FXML private RadioButton RapideRB;
     @FXML private Button MarioButton;
     @FXML private Button LuigiButton;
-    @FXML private ImageView marioChoix;
-//    @FXML private ObservableList<String> options = FXCollections.observableArrayList("Mario","Luigi");
+    @FXML private TextField pseudo;
     @FXML private ComboBox<String> combo;
     private SimpleStringProperty choix = new SimpleStringProperty();
-
+    private final ObservableList<Player> data = FXCollections.observableArrayList(new Player("test1",82),new Player("test2",67));
+    @FXML private TableView scores = new TableView();
+    @FXML private TableColumn pseudocol;
+    @FXML private TableColumn tempscol;
 
     @FXML
     private void initialize(){
+        pseudocol.setCellValueFactory(
+                new PropertyValueFactory<>("pseudo"));
+        tempscol.setCellValueFactory(
+                new PropertyValueFactory<>("tps"));
+        scores.setItems(data);
         if(Main.getVitesse()==2){
             RapideRB.setSelected(true);
         }
         else{
             LentRB.setSelected(true);
         }
+        MarioButton.setStyle("-fx-background-image: url('file:src/images/marioChoix.png')");
+        LuigiButton.setStyle("-fx-background-image: url('file:src/images/luigiChoix.png')");
         choix.bindBidirectional(combo.valueProperty());
         choix.addListener((observable, oldValue, newValue) -> {
             if(newValue.equals("Mario")){
                 Main.setPerso(0);
-                MarioButton.setStyle("-fx-background-color: rgba(255, 0, 0, 0.8) ");
-                LuigiButton.setStyle("-fx-background-color: rgba(195, 195, 195, 1) ");
+                MarioButton.setStyle("-fx-background-image: url('file:src/images/marioChoix.png'); -fx-border-color: red; -fx-border-width: 3px");
+                LuigiButton.setStyle("-fx-background-image: url('file:src/images/luigiChoix.png'); -fx-border-color: black");
             }
             else{
                 Main.setPerso(1);
-                LuigiButton.setStyle("-fx-background-color: rgba(0, 200, 0, 0.8) ");
-                MarioButton.setStyle("-fx-background-color: rgba(195, 195, 195, 1)");
+                MarioButton.setStyle("-fx-background-image: url('file:src/images/marioChoix.png'); -fx-border-color: black");
+                LuigiButton.setStyle("-fx-background-image: url('file:src/images/luigiChoix.png'); -fx-border-color: red; -fx-border-width: 3px");
             }
         });
     }
@@ -61,13 +61,15 @@ public class ControllerView {
     }
 
     public void ClickStart(ActionEvent actionEvent) {
-        if(LentRB.isSelected()){
-            Main.setVitesse(1);
+        if(!pseudo.getText().equals("")) {
+            if (LentRB.isSelected()) {
+                Main.setVitesse(1);
+            } else if (RapideRB.isSelected()) {
+                Main.setVitesse(2);
+            }
+            Main.setPseudo(pseudo.getText());
+            Main.creerJeu();
         }
-        else if(RapideRB.isSelected()){
-            Main.setVitesse(2);
-        }
-        Main.creerJeu();
     }
 
     public void onClickMario(){

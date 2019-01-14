@@ -42,8 +42,10 @@ public class Controller {
     private int cptB = 0;
     private Boss b;
     private Timeline timelineBoss;
+    private static int cptTemps=0;
 
     public Controller(Stage primaryStage) {
+        cptTemps=0;
         root = new AnchorPane();
         scene = new Scene(root, getTailleXS(), Main.getTailleYS());
         primaryStage.setScene(scene);
@@ -54,7 +56,12 @@ public class Controller {
         primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
         ImageView fond = new ImageView(new Image("file:src/images/fond.jpeg",(double)Main.getTailleXS(),(double)Main.getTailleYS(),true,true));
         root.getChildren().add(fond);
-        mario = new Mario();
+        if(Main.getPerso()==0){
+            mario = new Mario(new Image("file:src/images/mario.png"));
+        }
+        else{
+            mario = new Mario(new Image("file:src/images/marioVert.png"));
+        }
         root.getChildren().add(mario.isIV());
         listMissile = new ArrayList<>();
         listShell = new ArrayList<>();
@@ -94,7 +101,7 @@ public class Controller {
     }
 
     private void boucle() {
-
+        cptTemps++;
         int imageX = mario.isImageX(), imageY = mario.isImageY();
         Collisions(imageX, imageY);
         if (mario.isDead()) {
@@ -397,6 +404,8 @@ public class Controller {
                 }
                 s.move();
                 s.isHitting();
+
+
                 i++;
             }
         }
@@ -484,5 +493,7 @@ public class Controller {
     }
 
 
-
+    public static int getCptTemps() {
+        return cptTemps;
+    }
 }

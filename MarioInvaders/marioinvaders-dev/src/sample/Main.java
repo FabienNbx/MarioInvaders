@@ -23,7 +23,8 @@ public class Main extends Application {
     // speed different on a computer or on another
     private static int vitesse = 1;
 
-    private static int perso;
+    private static int perso=0;
+    private static String pseudo;
     
     private static Stage stageMain;
     public static int getTailleXS() {
@@ -45,6 +46,10 @@ public class Main extends Application {
     public static int getPerso() { return perso; }
 
     public static void setPerso(int perso) { Main.perso = perso; }
+
+    public static String getPseudo() {return pseudo;  }
+
+    public static void setPseudo(String pseudo) {Main.pseudo = pseudo; }
 
 
     @Override

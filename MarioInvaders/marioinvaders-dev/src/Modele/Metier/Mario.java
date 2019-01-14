@@ -27,8 +27,8 @@ public class Mario {
     private boolean isDead = false;
     private boolean isFlashing = false;
 
-    public Mario(){
-        mario = new Image("file:src/images/marioVert.png", true);
+    public Mario(Image img){
+        mario = img;
         iV = new ImageView(mario);
         imageX=620;
         imageY=850;
