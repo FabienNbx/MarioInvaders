@@ -31,7 +31,7 @@ public abstract class Boss {
         updateImageView(getImageX(),getImageY()+1* Main.getVitesse());
     }
 
-    public abstract void moveH();
+    public abstract void moveH() throws Exception;
 
     public int[] tailleBoss(){
         String s = getClass().getName();
@@ -94,8 +94,6 @@ public abstract class Boss {
         return taille;
 
     }
-
-    public abstract void shoot();
 
 
     public void updateImageView(int imageX,int imageY) {

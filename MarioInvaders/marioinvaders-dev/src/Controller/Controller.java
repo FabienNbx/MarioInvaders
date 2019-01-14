@@ -40,7 +40,7 @@ public class Controller {
     private int boss = 0;   // 0 = pas de boss / 1 = boss move / 2 = boss shoot / 3 = boss mort
     private int nbBoss = 0;
     private int cptB = 0;
-    Boss b;
+    private Boss b;
     private Timeline timelineBoss;
 
     public Controller(Stage primaryStage) {
@@ -239,7 +239,12 @@ public class Controller {
     }
 
     private void BossMoveH(){
-        b.moveH();
+        try {
+            b.moveH();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     private void BossMoveUp(){

@@ -56,14 +56,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 2880,
-											"top": 368,
+											"left": 2752,
+											"top": 448,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -80,15 +81,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 63,
+											"left": 1381,
+											"top": 103,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "Mario",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -105,15 +107,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 2880,
-											"top": 368,
+											"left": 2752,
+											"top": 448,
 											"width": 73.67724609375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -130,14 +133,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 2880,
-											"top": 368,
+											"left": 2752,
+											"top": 448,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -149,8 +153,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1440,
-									"top": 56,
+									"left": 1376,
+									"top": 96,
 									"width": 267.60693359375,
 									"height": 25,
 									"autoResize": false,
@@ -195,15 +199,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 86,
+											"left": 1381,
+											"top": 126,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-nbLife: SimpleIntegerProperty",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -223,15 +228,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 101,
+											"left": 1381,
+											"top": 141,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-iV: ImageView",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -251,15 +257,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 116,
+											"left": 1381,
+											"top": 156,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-imageX: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -279,15 +286,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 131,
+											"left": 1381,
+											"top": 171,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-imageY: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -307,15 +315,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 146,
+											"left": 1381,
+											"top": 186,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-goUp: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -335,15 +344,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 161,
+											"left": 1381,
+											"top": 201,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-goDown: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -363,15 +373,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 176,
+											"left": 1381,
+											"top": 216,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-goRight: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -391,15 +402,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 191,
+											"left": 1381,
+											"top": 231,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-goLeft: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -419,15 +431,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 206,
+											"left": 1381,
+											"top": 246,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-missiles: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -447,15 +460,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 221,
+											"left": 1381,
+											"top": 261,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-isFlashing: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -475,15 +489,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 236,
+											"left": 1381,
+											"top": 276,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-isDead: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -503,15 +518,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 251,
+											"left": 1381,
+											"top": 291,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-mario: Image",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -523,8 +539,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1440,
-									"top": 81,
+									"left": 1376,
+									"top": 121,
 									"width": 267.60693359375,
 									"height": 188,
 									"autoResize": false
@@ -557,15 +573,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 274,
+											"left": 1381,
+											"top": 314,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+Mario()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -585,15 +602,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 289,
+											"left": 1381,
+											"top": 329,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+actions(key: KeyEvent)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -613,15 +631,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 304,
+											"left": 1381,
+											"top": 344,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+updateImageView(imageX: int, imageY: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -641,15 +660,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 319,
+											"left": 1381,
+											"top": 359,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+stop(key: KeyEvent)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -669,15 +689,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 334,
+											"left": 1381,
+											"top": 374,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+shoot()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -697,15 +718,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 349,
+											"left": 1381,
+											"top": 389,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+die()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -725,15 +747,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 364,
+											"left": 1381,
+											"top": 404,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+flash()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -753,15 +776,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 379,
+											"left": 1381,
+											"top": 419,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+stopFlash()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -781,15 +805,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 394,
+											"left": 1381,
+											"top": 434,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+changeIV()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -809,15 +834,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 409,
+											"left": 1381,
+											"top": 449,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+beHitted(power: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -837,15 +863,16 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1445,
-											"top": 424,
+											"left": 1381,
+											"top": 464,
 											"width": 257.60693359375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+stopMissiles()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -857,8 +884,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1440,
-									"top": 269,
+									"left": 1376,
+									"top": 309,
 									"width": 267.60693359375,
 									"height": 173,
 									"autoResize": false
@@ -881,8 +908,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1440,
-									"top": 184,
+									"left": 1376,
+									"top": 224,
 									"width": 10,
 									"height": 10,
 									"autoResize": false
@@ -905,8 +932,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1440,
-									"top": 184,
+									"left": 1376,
+									"top": 224,
 									"width": 10,
 									"height": 10,
 									"autoResize": false
@@ -921,8 +948,8 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
-							"left": 1440,
-							"top": 56,
+							"left": 1376,
+							"top": 96,
 							"width": 267.60693359375,
 							"height": 401,
 							"autoResize": false,
@@ -995,7 +1022,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1020,7 +1048,8 @@
 											"underline": false,
 											"text": "SmallShell",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1045,7 +1074,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1069,7 +1099,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1135,7 +1166,8 @@
 											"underline": false,
 											"text": "-nbLife: int = 1",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -1163,7 +1195,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 50 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -1191,7 +1224,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 42 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1245,7 +1279,8 @@
 											"underline": false,
 											"text": "+SmallShell()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -1273,7 +1308,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1423,7 +1459,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1448,7 +1485,8 @@
 											"underline": false,
 											"text": "MediumShell",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1473,7 +1511,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1497,7 +1536,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1563,7 +1603,8 @@
 											"underline": false,
 											"text": "-nbLife: int = 3",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -1591,7 +1632,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 75 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -1619,7 +1661,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 62 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1673,7 +1716,8 @@
 											"underline": false,
 											"text": "+MediumShell()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -1701,7 +1745,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1851,7 +1896,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1876,7 +1922,8 @@
 											"underline": false,
 											"text": "BigShell",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1901,7 +1948,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -1925,7 +1973,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -1991,7 +2040,8 @@
 											"underline": false,
 											"text": "-nbLife: int = 5",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -2019,7 +2069,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 100 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -2047,7 +2098,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 100 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -2101,7 +2153,8 @@
 											"underline": false,
 											"text": "+BigShell()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2129,7 +2182,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -2279,7 +2333,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -2304,7 +2359,8 @@
 											"underline": false,
 											"text": "Boss",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -2329,7 +2385,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -2353,7 +2410,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -2419,7 +2477,8 @@
 											"underline": false,
 											"text": "-nbLife: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -2447,7 +2506,8 @@
 											"underline": false,
 											"text": "-iV: ImageView",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -2475,7 +2535,8 @@
 											"underline": false,
 											"text": "-imageX: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -2503,7 +2564,8 @@
 											"underline": false,
 											"text": "-imageY: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -2531,7 +2593,8 @@
 											"underline": false,
 											"text": "-moveH: int = 0",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -2585,7 +2648,8 @@
 											"underline": false,
 											"text": "+Boss(iV: ImageView, imageX: int, imageY: int, nbLife: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2613,7 +2677,8 @@
 											"underline": false,
 											"text": "+moveUp()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2641,7 +2706,8 @@
 											"underline": false,
 											"text": "+moveDown()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2669,7 +2735,8 @@
 											"underline": false,
 											"text": "+moveH()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2697,7 +2764,8 @@
 											"underline": false,
 											"text": "+tailleBoss(): int*",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2725,7 +2793,8 @@
 											"underline": false,
 											"text": "+tailleMissile(): int*",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2753,7 +2822,8 @@
 											"underline": false,
 											"text": "+updateImageView(imageX: int, imageY: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -2781,7 +2851,8 @@
 											"underline": false,
 											"text": "+beHitted(power: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -2924,14 +2995,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 848,
+											"left": 752,
 											"top": -528,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -2948,7 +3020,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 439,
 											"width": 232.6923828125,
 											"height": 13,
@@ -2956,7 +3028,8 @@
 											"underline": false,
 											"text": "Goomboss",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -2973,7 +3046,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 848,
+											"left": 752,
 											"top": -528,
 											"width": 73.67724609375,
 											"height": 13,
@@ -2981,7 +3054,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -2998,14 +3072,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 848,
+											"left": 752,
 											"top": -528,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3017,7 +3092,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 496,
+									"left": 448,
 									"top": 432,
 									"width": 242.6923828125,
 									"height": 25,
@@ -3063,7 +3138,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 462,
 											"width": 232.6923828125,
 											"height": 13,
@@ -3071,7 +3146,8 @@
 											"underline": false,
 											"text": "-nbLife: int = 30",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -3091,7 +3167,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 477,
 											"width": 232.6923828125,
 											"height": 13,
@@ -3099,7 +3175,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 227 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -3119,7 +3196,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 492,
 											"width": 232.6923828125,
 											"height": 13,
@@ -3127,7 +3204,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 271 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -3147,7 +3225,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 507,
 											"width": 232.6923828125,
 											"height": 13,
@@ -3155,7 +3233,8 @@
 											"underline": false,
 											"text": "-vitesseDeplacement: int = 1 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3167,7 +3246,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 496,
+									"left": 448,
 									"top": 457,
 									"width": 242.6923828125,
 									"height": 68,
@@ -3201,7 +3280,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 530,
 											"width": 232.6923828125,
 											"height": 13,
@@ -3209,7 +3288,8 @@
 											"underline": false,
 											"text": "+Goomboss()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -3229,7 +3309,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 501,
+											"left": 453,
 											"top": 545,
 											"width": 232.6923828125,
 											"height": 13,
@@ -3237,7 +3317,8 @@
 											"underline": false,
 											"text": "+moveH()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3249,7 +3330,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 496,
+									"left": 448,
 									"top": 525,
 									"width": 242.6923828125,
 									"height": 38,
@@ -3273,7 +3354,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 424,
+									"left": 376,
 									"top": -264,
 									"width": 10,
 									"height": 10,
@@ -3297,7 +3378,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 424,
+									"left": 376,
 									"top": -264,
 									"width": 10,
 									"height": 10,
@@ -3313,7 +3394,7 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
-							"left": 496,
+							"left": 448,
 							"top": 432,
 							"width": 242.6923828125,
 							"height": 131,
@@ -3387,7 +3468,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -3412,7 +3494,8 @@
 											"underline": false,
 											"text": "BowserJr",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -3437,7 +3520,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -3461,7 +3545,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3527,7 +3612,8 @@
 											"underline": false,
 											"text": "-nbLife: int = 50",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -3555,7 +3641,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 136 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -3583,7 +3670,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 207 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -3611,7 +3699,8 @@
 											"underline": false,
 											"text": "-vitesseDeplacement: int = 2 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3665,7 +3754,8 @@
 											"underline": false,
 											"text": "+BowserJr()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -3693,7 +3783,8 @@
 											"underline": false,
 											"text": "+moveH()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3843,7 +3934,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -3868,7 +3960,8 @@
 											"underline": false,
 											"text": "Bowser",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -3893,7 +3986,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -3917,7 +4011,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -3983,7 +4078,8 @@
 											"underline": false,
 											"text": "-nbLife: int = 100",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4011,7 +4107,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 434 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4039,7 +4136,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 394 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4067,7 +4165,8 @@
 											"underline": false,
 											"text": "-vitesseDeplacement: int = 3 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -4121,7 +4220,8 @@
 											"underline": false,
 											"text": "+Bowser()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -4149,7 +4249,8 @@
 											"underline": false,
 											"text": "+moveH()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -4285,8 +4386,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 465,
-									"top": 595,
+									"left": 449,
+									"top": 587,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -4298,7 +4399,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4318,8 +4420,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 473,
-									"top": 608,
+									"left": 457,
+									"top": 599,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -4331,7 +4433,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4351,8 +4454,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 450,
-									"top": 570,
+									"left": 432,
+									"top": 562,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -4364,7 +4467,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -4383,7 +4487,7 @@
 								"$ref": "AAAAAAFnEcpiLNPzpN4="
 							},
 							"lineStyle": 1,
-							"points": "503:563;413:615",
+							"points": "469:563;413:600",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -4438,7 +4542,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4471,7 +4576,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4504,7 +4610,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -4578,7 +4685,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4611,7 +4719,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -4644,7 +4753,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -4719,7 +4829,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -4738,13 +4849,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 319,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "Projectile",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -4769,7 +4881,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -4793,7 +4906,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -4807,7 +4921,7 @@
 									"containerExtending": false,
 									"left": 1016,
 									"top": 312,
-									"width": 308,
+									"width": 309,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -4853,13 +4967,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 342,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-iV: ImageView",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4881,13 +4996,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 357,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-imageX: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4909,13 +5025,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 372,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-imageY: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4937,13 +5054,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 387,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "-isH: boolean",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4965,13 +5083,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 402,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": true,
 											"text": "-tailleImgX: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -4993,13 +5112,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 417,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": true,
 											"text": "-tailleImgY: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5013,7 +5133,7 @@
 									"containerExtending": false,
 									"left": 1016,
 									"top": 337,
-									"width": 308,
+									"width": 309,
 									"height": 98,
 									"autoResize": false
 								},
@@ -5047,13 +5167,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 440,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+Projectile(iV: ImageView, imageX: int, imageY: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -5075,13 +5196,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 455,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -5103,13 +5225,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 470,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+isHitting()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -5131,13 +5254,14 @@
 											"containerExtending": false,
 											"left": 1021,
 											"top": 485,
-											"width": 298,
+											"width": 299,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+updateImageView(imageX: int, imageY: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5151,7 +5275,7 @@
 									"containerExtending": false,
 									"left": 1016,
 									"top": 435,
-									"width": 308,
+									"width": 309,
 									"height": 68,
 									"autoResize": false
 								},
@@ -5215,7 +5339,7 @@
 							"containerExtending": false,
 							"left": 1016,
 							"top": 312,
-							"width": 308,
+							"width": 309,
 							"height": 191,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -5287,7 +5411,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -5312,7 +5437,8 @@
 											"underline": false,
 											"text": "Missile",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -5337,7 +5463,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -5361,7 +5488,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5427,7 +5555,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 18 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -5455,7 +5584,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 30 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5509,7 +5639,8 @@
 											"underline": false,
 											"text": "+Missile(imageX: int, imageY: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -5537,7 +5668,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5687,7 +5819,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -5712,7 +5845,8 @@
 											"underline": false,
 											"text": "Dirt",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -5737,7 +5871,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -5761,7 +5896,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5827,7 +5963,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 74 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -5855,7 +5992,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 74 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -5909,7 +6047,8 @@
 											"underline": false,
 											"text": "+Dirt()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -5937,7 +6076,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6087,7 +6227,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -6112,7 +6253,8 @@
 											"underline": false,
 											"text": "SmallFireBall",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -6137,7 +6279,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -6161,7 +6304,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6227,7 +6371,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 73 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -6255,7 +6400,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 75 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6309,7 +6455,8 @@
 											"underline": false,
 											"text": "+SmallFireBall()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -6337,7 +6484,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6487,7 +6635,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -6512,7 +6661,8 @@
 											"underline": false,
 											"text": "BigFireBall",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -6537,7 +6687,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -6561,7 +6712,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6627,7 +6779,8 @@
 											"underline": true,
 											"text": "-tailleImgX: int = 153 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLAttributeView",
@@ -6655,7 +6808,8 @@
 											"underline": true,
 											"text": "-tailleImgY: int = 147 {readOnly}",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6709,7 +6863,8 @@
 											"underline": false,
 											"text": "+BigFireBall()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -6737,7 +6892,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -6886,7 +7042,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -6919,7 +7076,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -6952,7 +7110,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -6971,7 +7130,7 @@
 								"$ref": "AAAAAAFnEdNkTdTjDbc="
 							},
 							"lineStyle": 1,
-							"points": "1485:607;1321:503",
+							"points": "1486:607;1321:503",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -7026,7 +7185,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7059,7 +7219,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7092,7 +7253,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -7166,7 +7328,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7199,7 +7362,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7232,7 +7396,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -7306,7 +7471,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7339,7 +7505,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7372,7 +7539,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -7433,8 +7601,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1553,
-									"top": 525,
+									"left": 1534,
+									"top": 548,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -7446,7 +7614,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7466,8 +7635,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1538,
-									"top": 525,
+									"left": 1519,
+									"top": 550,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -7479,7 +7648,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7499,8 +7669,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1582,
-									"top": 526,
+									"left": 1563,
+									"top": 543,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -7512,7 +7682,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -7531,7 +7702,7 @@
 								"$ref": "AAAAAAFnEdNkTdTjDbc="
 							},
 							"lineStyle": 1,
-							"points": "1567:607;1570:457",
+							"points": "1558:607;1541:497",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -7573,8 +7744,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 725,
-									"top": 575,
+									"left": 702,
+									"top": 574,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -7586,7 +7757,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7606,8 +7778,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 717,
-									"top": 588,
+									"left": 695,
+									"top": 587,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -7619,7 +7791,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7639,8 +7812,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 740,
-									"top": 550,
+									"left": 715,
+									"top": 547,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -7652,7 +7825,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -7671,7 +7845,7 @@
 								"$ref": "AAAAAAFnEdUaStU9F1k="
 							},
 							"lineStyle": 1,
-							"points": "743:575;723:563",
+							"points": "727:577;691:558",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -7726,7 +7900,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7759,7 +7934,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7792,7 +7968,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -7866,7 +8043,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7899,7 +8077,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7932,7 +8111,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -8007,7 +8187,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -8032,7 +8213,8 @@
 											"underline": false,
 											"text": "Shell",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -8057,7 +8239,8 @@
 											"underline": false,
 											"text": "(from Model)",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "LabelView",
@@ -8081,7 +8264,8 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 1,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -8147,7 +8331,8 @@
 											"underline": false,
 											"text": "-nbLife: int",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -8201,7 +8386,8 @@
 											"underline": false,
 											"text": "+Shell(iV: ImageView, imageX: int, imageY: int, nbLife: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -8229,7 +8415,8 @@
 											"underline": false,
 											"text": "+move()",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										},
 										{
 											"_type": "UMLOperationView",
@@ -8257,7 +8444,8 @@
 											"underline": false,
 											"text": "+beHitted(power: int)",
 											"horizontalAlignment": 0,
-											"verticalAlignment": 5
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -8406,7 +8594,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8439,7 +8628,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8472,7 +8662,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -8546,7 +8737,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8579,7 +8771,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8612,7 +8805,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -8686,7 +8880,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8719,7 +8914,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8752,7 +8948,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,
@@ -8826,7 +9023,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8859,7 +9057,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -8892,7 +9091,8 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5
+									"verticalAlignment": 5,
+									"wordWrap": false
 								}
 							],
 							"visible": true,

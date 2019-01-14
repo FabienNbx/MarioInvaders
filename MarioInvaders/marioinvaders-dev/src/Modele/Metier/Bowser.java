@@ -12,27 +12,25 @@ public class Bowser extends Boss{
         super(new ImageView(new Image("file:src/images/bowser.png",true)),imageX,imageY,100);
     }
 
-    @Override
-    public void shoot(){
-
-    }
-
     public static int getTailleImgX(){ return tailleImgX;}
 
     public static int getTailleImgY(){ return  tailleImgY;}
 
     @Override
-    public void moveH(){
+    public void moveH() throws Exception{
         if(super.moveH==0) {
             updateImageView(getImageX()-vitesseDeplacement*Main.getVitesse(), getImageY());
             if(getImageX()<=0)
                 super.moveH=1;
         }
-        else{
+        else if(super.moveH==1){
             updateImageView(getImageX()+vitesseDeplacement*Main.getVitesse(), getImageY());
             int taille[] = tailleBoss();
             if(getImageX()+taille[0]>=Main.getTailleXS())
                 super.moveH=0;
+        }
+        else{
+            throw new Exception("Probleme moveH != de 0 ou 1");
         }
     }
 }
