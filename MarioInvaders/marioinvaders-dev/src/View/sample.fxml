@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="root" prefHeight="679.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerView">
+<AnchorPane id="root" prefHeight="679.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerView">
     <children>
         <Text layoutX="164.0" layoutY="43.0" text="Mario Invaders" wrappingWidth="143.32568359375" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="26.2919921875">
          <font>
@@ -41,12 +41,16 @@
       <Button fx:id="LuigiButton" layoutX="274.0" layoutY="424.0" mnemonicParsing="false" onAction="#onClickLuigi" prefHeight="201.0" prefWidth="129.0" />
       <TextField fx:id="pseudo" layoutX="173.0" layoutY="269.0" />
       <Label layoutX="103.0" layoutY="274.0" prefHeight="16.0" prefWidth="70.0" text="Pseudo :" />
-      <TableView fx:id="scores" layoutX="434.0" layoutY="46.0" prefHeight="588.0" prefWidth="358.0">
+      <TableView fx:id="scores" layoutX="434.0" layoutY="84.0" prefHeight="550.0" prefWidth="358.0">
           <columns>
-              <TableColumn fx:id="pseudocol" prefWidth="196.0" text="Pseudo" />
-              <TableColumn fx:id="tempscol" prefWidth="161.0" text="Temps ( secondes )" />
+              <TableColumn fx:id="pseudocol" prefWidth="219.0" resizable="false" text="Pseudo" />
+              <TableColumn fx:id="tempscol" prefWidth="138.0" resizable="false" text="Temps ( secondes )" />
           </columns>
       </TableView>
+      <Label layoutX="530.0" layoutY="18.0" prefHeight="55.0" prefWidth="206.0" text="Tableau des scores :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
     </children>
 
 </AnchorPane>

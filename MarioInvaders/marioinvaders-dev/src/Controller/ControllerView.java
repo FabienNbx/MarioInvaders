@@ -11,6 +11,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Main;
 
 import javax.swing.text.html.ImageView;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Comparator;
 
 public class ControllerView {
     @FXML private RadioButton LentRB;
@@ -20,17 +25,33 @@ public class ControllerView {
     @FXML private TextField pseudo;
     @FXML private ComboBox<String> combo;
     private SimpleStringProperty choix = new SimpleStringProperty();
-    private final ObservableList<Player> data = FXCollections.observableArrayList(new Player("test1",82),new Player("test2",67));
+    private final ObservableList<Player> data = FXCollections.observableArrayList();
     @FXML private TableView scores = new TableView();
     @FXML private TableColumn pseudocol;
     @FXML private TableColumn tempscol;
 
     @FXML
     private void initialize(){
+        try{
+            InputStream flux=new FileInputStream("resultats.dat");
+            InputStreamReader lecture=new InputStreamReader(flux);
+            BufferedReader buff=new BufferedReader(lecture);
+            String ligne;
+            while ((ligne=buff.readLine())!=null){
+                String[] parts = ligne.split(" ");
+                data.add(new Player(parts[0],Integer.parseInt(parts[1])));
+            }
+            buff.close();
+        }
+        catch (Exception e){
+            System.out.println(e.toString());
+        }
         pseudocol.setCellValueFactory(
                 new PropertyValueFactory<>("pseudo"));
         tempscol.setCellValueFactory(
                 new PropertyValueFactory<>("tps"));
+        Comparator<Player> c = Comparator.comparingInt(Player::getTps);
+        data.sort(c);
         scores.setItems(data);
         if(Main.getVitesse()==2){
             RapideRB.setSelected(true);
@@ -69,6 +90,9 @@ public class ControllerView {
             }
             Main.setPseudo(pseudo.getText());
             Main.creerJeu();
+        }
+        else{
+            pseudo.setStyle("-fx-border-color: red; -fx-border-width: 3px");
         }
     }
 

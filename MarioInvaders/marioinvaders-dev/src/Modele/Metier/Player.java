@@ -4,28 +4,28 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Player {
-    private final SimpleStringProperty pseudo;
-    private final SimpleIntegerProperty tps;
+    private String pseudo;
+    private int tps;
 
     public Player(String pseudo,int tps) {
-        this.pseudo = new SimpleStringProperty(pseudo);
-        this.tps = new SimpleIntegerProperty(tps);
+        this.pseudo = pseudo;
+        this.tps = tps;
     }
 
     public String getPseudo() {
-        return pseudo.get();
+        return pseudo;
     }
 
     public void setPseudo(String pseudo) {
-        this.pseudo.set(pseudo);
+        this.pseudo=pseudo;
     }
 
     public int getTps() {
-        return tps.get();
+        return tps;
     }
 
     public void setTps(int tps) {
-        this.tps.set(tps);
+        this.tps=tps;
     }
 
 }
