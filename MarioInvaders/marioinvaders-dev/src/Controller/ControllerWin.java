@@ -23,15 +23,20 @@ public class ControllerWin {
             }
             buff.close();
             lecture.close();
-
+            FileWriter fw = new FileWriter(f);
+            BufferedWriter bw = new BufferedWriter(fw);
+            int test=1;
             for (Player p : data) {
                 if (p.getPseudo().equals(Main.getPseudo())) {
                     if (p.getTps() > Controller.getCptTemps() * 10 / 1000)
                         p.setTps(Controller.getCptTemps() * 10 / 1000);
+                    test=0;
+                    break;
                 }
             }
-            FileWriter fw = new FileWriter(f);
-            BufferedWriter bw = new BufferedWriter(fw);
+            if(test==1){
+                data.add(new Player(Main.getPseudo(),Controller.getCptTemps()*10/1000));
+            }
             for (Player p : data) {
                 bw.write(p.getPseudo() + " " + p.getTps());
                 bw.newLine();
