@@ -6,10 +6,21 @@ import sample.Main;
 public abstract class Boss {
     private int nbLife;
     private ImageView iV;
+
+    // boss's coordinates X,Y
     private int imageX;
     private int imageY;
+
+    // to know in which direction the boss will go
     protected int moveH = 0; // 0 = gauche / 1 = droite
 
+    /**
+     * Constructor
+     * @param iV : image
+     * @param imageX : X position
+     * @param imageY : Y position
+     * @param nbLife : number of lifes
+     */
     public Boss (ImageView iV, int imageX, int imageY, int nbLife){
         this.iV=iV;
         this.imageX=imageX;
@@ -18,21 +29,34 @@ public abstract class Boss {
         this.iV.setX(imageX);
         this.iV.setY(imageY);
     }
-    public int getNbLife() {
-        return nbLife;
-    }
 
 
+    /**
+     * Leave the screen by the top when died
+     */
     public void moveUp(){
         updateImageView(getImageX(),getImageY()-1* Main.getVitesse());
     }
 
+
+    /**
+     * Come in the screen by the top to the middle
+     */
     public void moveDown(){
         updateImageView(getImageX(),getImageY()+1* Main.getVitesse());
     }
 
+
+    /**
+     * Move horizontally
+     * @throws Exception
+     */
     public abstract void moveH() throws Exception;
 
+    /**
+     * Give the sizes and the power of the boss
+     * @return table with X and Y sizes and power
+     */
     public int[] tailleBoss(){
         String s = getClass().getName();
         int tailleX;
@@ -64,6 +88,11 @@ public abstract class Boss {
 
     }
 
+
+    /**
+     * Give missile's sizes and power
+     * @return table with X and Y sizes and the power
+     */
     public int[] tailleMissile(){
         String s = getClass().getName();
         int tailleX;
@@ -96,6 +125,11 @@ public abstract class Boss {
     }
 
 
+    /**
+     * Update position of the boss
+     * @param imageX : X position
+     * @param imageY : Y position
+     */
     public void updateImageView(int imageX,int imageY) {
         this.imageX = imageX;
         this.imageY = imageY;
@@ -103,6 +137,10 @@ public abstract class Boss {
         iV.setY(this.imageY);
     }
 
+    /**
+     * Decrease number of lifes by power and check if dead
+     * @param power : damages
+     */
     public void beHitted(int power){
         if(power>nbLife){
             nbLife=0;
@@ -111,12 +149,12 @@ public abstract class Boss {
             nbLife = nbLife - power;
         }
     }
-    public ImageView getiV() {
-        return iV;
-    }
-    public int getImageX(){
-        return imageX;
-    }
+
+
+    /**
+     * Set Y position and check if possible
+     * @param imageY : new position
+     */
     public void setImageY(int imageY){
         if(imageY>(int) (Main.getTailleYS()-iV.getFitHeight())){
             imageY= (int) (Main.getTailleYS()-iV.getFitHeight());
@@ -125,6 +163,11 @@ public abstract class Boss {
             imageY=0;
         this.imageY=imageY;
     }
+
+    /**
+     * Set X position and check if possible
+     * @param imageX : new position
+     */
     public void setImageX(int imageX){
         if(imageX>(int) (Main.getTailleXS()-iV.getFitWidth())){
             imageX= (int) (Main.getTailleXS()-iV.getFitWidth());
@@ -134,7 +177,18 @@ public abstract class Boss {
         }
         this.imageX=imageX;
     }
+
     public int getImageY(){
         return imageY;
+    }
+
+    public int getNbLife() {
+        return nbLife;
+    }
+    public ImageView getiV() {
+        return iV;
+    }
+    public int getImageX(){
+        return imageX;
     }
 }

@@ -24,7 +24,9 @@ import static java.lang.Math.*;
 import static sample.Main.getTailleXS;
 
 public class Controller {
+    //main timeline, manage the time in the game
     private Timeline master;
+    //manage the apparition time between each shell
     private int cpt = 0;
     private AnchorPane root;
     private Scene scene;
@@ -35,15 +37,25 @@ public class Controller {
     private ArrayList<Projectile> listMissiledead;
     private ArrayList<Projectile> listShelldead;
     private ArrayList<Projectile> listMissBossdead;
+    //manage which Shell is launched (different probability : 0=small, 1=Medium, 2=Big
     private int[] tabRand = {0,0,0,0,0,0,0,1,1,1,1,2};
+    //pick a random numbre
     private Random randomS = new Random();
     private int boss = 0;   // 0 = pas de boss / 1 = boss move / 2 = boss shoot / 3 = boss mort
+    //1=goomboss 2=BowserJR 3=Bowser
     private int nbBoss = 0;
+    //manage the apparition time between each Boss's Projectile
     private int cptB = 0;
     private Boss b;
+    //manage the apparition time between each Boss apparition
     private Timeline timelineBoss;
+    //time the player plays
     private static int cptTemps=0;
 
+    /**
+     * Constructor
+     * @param primaryStage : main stage
+     */
     public Controller(Stage primaryStage) {
         cptTemps=0;
         root = new AnchorPane();
@@ -90,6 +102,9 @@ public class Controller {
         root.getChildren().add(l);
     }
 
+    /**
+     * start the game
+     */
     private void start(){
         scene.setOnKeyPressed(key -> mario.actions(key));
         scene.setOnKeyReleased(key -> mario.stop(key));
@@ -100,10 +115,14 @@ public class Controller {
         master.play();
     }
 
+    /**
+     * Game's loop
+     */
     private void boucle() {
         cptTemps++;
         int imageX = mario.isImageX(), imageY = mario.isImageY();
-        Collisions(imageX, imageY);
+        CollisionsMarioShells(imageX, imageY);
+        CollisionsMissilesShells();
         if (mario.isDead()) {
             MarioDead(imageX, imageY);
         }
@@ -138,6 +157,11 @@ public class Controller {
         }
     }
 
+    /**
+     * Manage collisions between Mario and Boss's Missile
+     * @param imageX : Mario X coordinate
+     * @param imageY : Mario Y coordinate
+     */
     private void ColliMissBoss(int imageX, int imageY) {
         int centreMario[] = {imageX + 25, imageY + 25};
         if(!mario.isFlashing()) {
@@ -158,6 +182,11 @@ public class Controller {
         }
     }
 
+    /**
+     * Manage collisions between Mario and boss
+     * @param imageX : Mario X coordinate
+     * @param imageY : Mario Y coordinate
+     */
     private void ColliBoss(int imageX, int imageY) {
         int centreMario[] = {imageX + 25, imageY + 25};
         if(!mario.isFlashing()) {
@@ -196,6 +225,9 @@ public class Controller {
         }
     }
 
+    /**
+     * Manage how boss shoot
+     */
     private void BossShoot() {
         double tps;
         tps = 50 + (Math.random() * (300 - 50));
@@ -231,6 +263,9 @@ public class Controller {
         }
     }
 
+    /**
+     * purge all missiles' boss
+     */
     private void PurgeMissBoss(){
         int i=0;
         while(listMissBoss.size() > 0){
@@ -240,6 +275,9 @@ public class Controller {
         }
     }
 
+    /**
+     * How boss go down
+     */
     private void BossMoveDown() {
         b.moveDown();
         if (b.getImageY() >= Main.getTailleYS() / 2 - b.tailleBoss()[1]) {
@@ -247,6 +285,9 @@ public class Controller {
         }
     }
 
+    /**
+     * How boss move horizontally
+     */
     private void BossMoveH(){
         try {
             b.moveH();
@@ -256,6 +297,9 @@ public class Controller {
         }
     }
 
+    /**
+     * How boss go up
+     */
     private void BossMoveUp(){
         b.moveUp();
         int taille[] = b.tailleBoss();
@@ -274,9 +318,14 @@ public class Controller {
         }
     }
 
-    private void Collisions(int imageX, int imageY) {
+    /**
+     * Manage collision between Mario and shells
+     * @param imageX : Mario X coordinate
+     * @param imageY : Mario Y coordinate
+     */
+    private void CollisionsMarioShells(int imageX, int imageY) {
         int centreMario[] = {imageX + 25, imageY + 25};
-        if(!mario.isFlashing()) {
+        if (!mario.isFlashing()) {
             for (Projectile p : listShell) {
                 String s = p.getClass().getName();
                 int x;
@@ -313,10 +362,15 @@ public class Controller {
                 }
             }
         }
-        for (Projectile p: listShelldead) {
+        for (Projectile p : listShelldead) {
             listShell.remove(p);
         }
+    }
 
+    /**
+     * Manage collision between missiles and shells
+     */
+    private void CollisionsMissilesShells(){
         for(Projectile m : listMissile) {
             int centreMissile[] = {m.getImageX()+Missile.getTailleImgX()/2, m.getImageY()+Missile.getTailleImgY()/2};
             for (Projectile p : listShell) {
@@ -363,6 +417,9 @@ public class Controller {
         }
     }
 
+    /**
+     * Generate shells
+     */
     private void Shells(){
         int num = tabRand[randomS.nextInt(12)];
         int randX;
@@ -394,6 +451,9 @@ public class Controller {
 
     }
 
+    /**
+     * How shells move down
+     */
     private void ShellsFall(){
         if (listShell.size() != 0) {
             int i = 0;
@@ -413,6 +473,11 @@ public class Controller {
         }
     }
 
+    /**
+     * When mario is dead
+     * @param imageX : Mario X coordinate
+     * @param imageY : Mario Y coordinate
+     */
     private void MarioDead(int imageX, int imageY){
         if(imageY< Main.getTailleYS()) {
             mario.updateImageView(imageX, imageY + (1*Main.getVitesse()));
@@ -425,6 +490,11 @@ public class Controller {
         }
     }
 
+    /**
+     * when mario is shooting
+     * @param imageX : Mario X coordinate
+     * @param imageY : Mario Y coordinate
+     */
     private void MarioShoot(int imageX, int imageY){
         if (mario.isMissiles()) {
             Projectile m = new Missile(imageX + 10, imageY - 30);
@@ -448,6 +518,11 @@ public class Controller {
         }
     }
 
+    /**
+     * How Mario moves
+     * @param imageX : Mario X coordinate
+     * @param imageY : Mario Y coordinate
+     */
     private void MarioMove(int imageX, int imageY){
         int vitesse;
         if(Main.getVitesse()==2)
@@ -470,6 +545,9 @@ public class Controller {
     }
 
 
+    /**
+     * Generate the correct boss
+     */
     private void lancerBoss() {
         boss=1;
         nbBoss++;
@@ -490,6 +568,9 @@ public class Controller {
         timelineBoss.stop();
     }
 
+    /**
+     * purge all the objects on the screen
+     */
     private void Purge(){
         root.getChildren().removeAll();
     }

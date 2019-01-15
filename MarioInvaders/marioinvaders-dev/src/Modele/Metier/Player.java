@@ -4,9 +4,16 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Player {
+    //pseudo of the player
     private String pseudo;
+    //time to win
     private int tps;
 
+    /**
+     * Constructot
+     * @param pseudo
+     * @param tps : time to win
+     */
     public Player(String pseudo,int tps) {
         this.pseudo = pseudo;
         this.tps = tps;

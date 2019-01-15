@@ -1,9 +1,9 @@
 #buttonStart {
-    -fx-background-color: green;
+    -fx-background-color: rgba(0,200,0,0.8);
 }
 
 #buttonQuit {
-    -fx-background-color: red;
+    -fx-background-color: rgba(255,0,0,0.7);
 }
 
 .button{
@@ -28,4 +28,12 @@
     -fx-background-insets: 0;
     -fx-padding: 0;
     -fx-shape: null;
+}
+
+#MarioButton{
+    -fx-background-image: url('file:src/images/marioChoix.png');
+}
+
+#LuigiButton{
+    -fx-background-image: url('file:src/images/luigiChoix.png');
 }

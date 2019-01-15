@@ -18,20 +18,43 @@ import java.io.InputStreamReader;
 import java.util.Comparator;
 
 public class ControllerView {
+
+    // FXML objects
+
+    // Buttons to choose the speed
     @FXML private RadioButton LentRB;
     @FXML private RadioButton RapideRB;
+
+    // Buttons to choose the character
     @FXML private Button MarioButton;
     @FXML private Button LuigiButton;
+
+    // TextField to give the player's pseudo
     @FXML private TextField pseudo;
+
+    // Combobox to choose the character
     @FXML private ComboBox<String> combo;
+
+    // Character chosen
     private SimpleStringProperty choix = new SimpleStringProperty();
+
+    // Table with players' scores
     private final ObservableList<Player> data = FXCollections.observableArrayList();
     @FXML private TableView scores = new TableView();
     @FXML private TableColumn pseudocol;
     @FXML private TableColumn tempscol;
 
+    /**
+     * Launched when the window is loading
+     */
     @FXML
     private void initialize(){
+        // Keep the pseudo between consecutive games
+        if(Main.getPseudo()!=null) {
+            pseudo.textProperty().setValue(Main.getPseudo());
+        }
+
+        // Collect registered scores with pseudos
         try{
             InputStream flux=new FileInputStream("resultats.dat");
             InputStreamReader lecture=new InputStreamReader(flux);
@@ -48,22 +71,32 @@ public class ControllerView {
         catch (Exception e){
             System.out.println(e.toString());
         }
+
+
         pseudocol.setCellValueFactory(
                 new PropertyValueFactory<>("pseudo"));
         tempscol.setCellValueFactory(
                 new PropertyValueFactory<>("tps"));
+
+        // Sort players by scores
         Comparator<Player> c = Comparator.comparingInt(Player::getTps);
         data.sort(c);
+
+        // Show scores
         scores.setItems(data);
+
+        // Keep the speed between consecutive games
         if(Main.getVitesse()==2){
             RapideRB.setSelected(true);
         }
         else{
             LentRB.setSelected(true);
         }
-        MarioButton.setStyle("-fx-background-image: url('file:src/images/marioChoix.png')");
-        LuigiButton.setStyle("-fx-background-image: url('file:src/images/luigiChoix.png')");
+
+        // Bind the selected value of the combobox with the "choix" variable
         choix.bindBidirectional(combo.valueProperty());
+
+        // Change buttons' color depending on the character('s choice
         choix.addListener((observable, oldValue, newValue) -> {
             if(newValue.equals("Mario")){
                 Main.setPerso(0);
@@ -78,12 +111,19 @@ public class ControllerView {
         });
     }
 
+    /**
+     * Click on the Quit button
+     */
     @FXML
-    public void ClickQuit(ActionEvent actionEvent) {
+    public void ClickQuit() {
         Main.quit();
     }
 
-    public void ClickStart(ActionEvent actionEvent) {
+    /**
+     * Click on the Start button
+     */
+    public void ClickStart() {
+        // check if the pseudo is correct
         if(!pseudo.getText().equals("")) {
             if (LentRB.isSelected()) {
                 Main.setVitesse(1);
@@ -98,10 +138,16 @@ public class ControllerView {
         }
     }
 
+    /**
+     * Click on the Mario Button : changes the character's choice to Mario
+     */
     public void onClickMario(){
         choix.setValue("Mario");
     }
 
+    /**
+     * Click on the Luigi Button : changes the character's choice to Luigi
+     */
     public void onClickLuigi(){
         choix.setValue("Luigi");
     }

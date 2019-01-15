@@ -5,17 +5,23 @@ import javafx.scene.image.ImageView;
 import sample.Main;
 
 public class BowserJr extends Boss{
+    //Size of BrowserJr's image
     private static int tailleImgX = 136;
     private static int tailleImgY = 207;
+    //Speed of Browser
     private final int vitesseDeplacement = 2;
+    /**
+     * @param imageX : X coordinate
+     * @param imageY : Y coordinate
+     */
     public BowserJr (int imageX, int imageY){
         super(new ImageView(new Image("file:src/images/bowserjr.png")),imageX,imageY,50);
     }
 
-    public static int getTailleImgX(){ return tailleImgX;}
-
-    public static int getTailleImgY(){ return  tailleImgY;}
-
+    /**
+     * If super.moveH==0 BrowserJr go on the left / if super.moveH==1 BrowserJr go on the right
+     * @throws Exception : if super.moveH isn't 0 or 1
+     */
     @Override
     public void moveH() throws Exception {
         if(super.moveH==0) {
@@ -33,4 +39,9 @@ public class BowserJr extends Boss{
             throw new Exception("Probleme moveH != de 0 ou 1");
         }
     }
+
+
+    public static int getTailleImgX(){ return tailleImgX;}
+
+    public static int getTailleImgY(){ return  tailleImgY;}
 }
