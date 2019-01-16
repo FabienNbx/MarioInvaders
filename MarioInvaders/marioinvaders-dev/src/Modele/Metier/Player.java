@@ -11,7 +11,7 @@ public class Player {
 
     /**
      * Constructot
-     * @param pseudo
+     * @param pseudo : Player's pseudo
      * @param tps : time to win
      */
     public Player(String pseudo,int tps) {
